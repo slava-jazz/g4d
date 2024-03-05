@@ -1,13 +1,3 @@
-<style>
-.std-image {
-  width: 300px;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;  
-  box-shadow: 2px 2px 5px;
-}
-</style>
 # Efficient geometrical library
 ## Basic
 This library is a bit different to other geometrical library like JTS, this library  is working with a parametric geometry. 
@@ -16,8 +6,7 @@ a ring.  A vertex (a shape point) of that geometry, additionally to regular coor
 This offset represents normalized travel distance along geometry from first vertex to that specific vertex. 
 The distance normalized in relative way form 0.0 to 1.0, where 0.0 is first vertex and 1.0 is the last vertex of the geometry.
 
-<img src="images/readme/001.png" alt="parametric geometry example" class="std-image"/>
-
+<img src="images/readme/001.png" alt="parametric geometry example" style="width:300px;height:auto;display:block;margin-left:auto;margin-right:auto;box-shadow:2px 2px 5px;"/>
 How you compute a distance between two positions, the library (in general) does not care , but it provides geodetic length calculator for your.
 ```java
     double length = Geodetic.calcDistanceInMeters(v1 , v2);
