@@ -1,18 +1,10 @@
 package today.geojutsu;
-
-/**
- * basic vertex with parametric offset
- * any instance is not mutable since it can be shared between many geometrical objects
- */
-import java.io.Serializable;
-
 /**
  * basic vertex with parametric offset
  * any instance is not mutable since it can be shared between many geometrical objects
  */
 public class V4d implements Comparable<V4d>
 {
-
   // all properties are public due best performance
   public final double xLon;
   public final double yLat;

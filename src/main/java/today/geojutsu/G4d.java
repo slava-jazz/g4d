@@ -262,6 +262,12 @@ public class G4d<TCustom> extends AABB
 
   public static final double __SEGMENT_TANGENT_BUILD_TOLERANCE = 0.05; // todo make it adjustable
 
+  /**
+   * build g4d from prepared v4d array and custom data
+   * @param _length length of the feature
+   * @param _shape prepared v4d array
+   * @return g4d feature
+   */
   public static <T> G4d<T> build(final double _length, final V4d[] _shape, final T _custom_data)
   {
     final G4d<T>.Edge[] edges = new G4d.Edge[Math.max(_shape.length - 1, 0)];
