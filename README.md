@@ -78,7 +78,9 @@ as computation of the feature length is fully on your side.
 Let's talk what an offset along geometry can give you. First of all it can be used as a markup element to point specific location on a feature.
 For example, there are two geometrical features crossing each other in specific point.The corresponded intersection offset
 is individual for each geometry.
+
 <img src="images/readme/002.png" alt="intersection example" style="width:300px;height:auto;display:block;margin-left:auto;margin-right:auto;box-shadow:2px 2px 5px;"/>
+
 For one feature it is 0.4, for other it is 0.6. Having that individual location you may easily 
 split each feature on intersection point.
 
