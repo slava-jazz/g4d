@@ -1,6 +1,5 @@
 package today.geojutsu.match;
 
-import com.oj.g4d.*;
 import today.geojutsu.*;
 
 import java.util.*;
