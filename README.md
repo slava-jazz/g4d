@@ -1,6 +1,6 @@
 # Efficient geometrical library
 
-This is the library of geometrical algorithms implemented to be fast and consume low memory. Here you wil find:
+This is the library of geometrical algorithms implemented to be fast and consume low memory. Here you will find:
 
 - intersections: poly-line to poly-line, poly-line to AABB, poly-line to Morton's grid
 - projections: point to poly-line, points to poly lines.
