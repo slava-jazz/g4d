@@ -1,5 +1,6 @@
 package today.geojutsu;
 
+import java.awt.geom.AffineTransform;
 import java.util.*;
 import java.util.Map.Entry;
 
@@ -161,6 +162,24 @@ public class G4d<TCustom> extends AABB
   public double getLength()
   {
     return length;
+  }
+
+
+  public G4d<TCustom> calcTransformation(final AffineTransform _tr)
+  {
+    double [] xy = new double[shape.length * 2];
+    for(int index = 0; index < shape.length; index++)
+    {
+      xy[index*2] = shape[index].xLon;
+      xy[index*2 + 1] = shape[index].yLat;
+    }
+    _tr.transform(xy,0,xy,0,shape.length);
+    V4d [] new_shape = new V4d[shape.length];
+    for(int index = 0; index < shape.length; index++)
+    {
+      new_shape[index] = new V4d(xy[index*2], xy[index*2 + 1],shape[index].zAlt,shape[index].o);
+    }
+    return G4d.build(length,new_shape,getCustomData());
   }
 
   /**

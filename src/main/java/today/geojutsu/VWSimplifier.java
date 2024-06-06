@@ -14,9 +14,9 @@ public class VWSimplifier
    * @param _tolerance minimal area of a vertex base triangle
    * @return simplified geometry
    */
-  public static G4d<?> apply(final G4d<?> _feature, double _tolerance)
+  public static <T> G4d<T> apply(final G4d<T> _feature, double _tolerance)
   {
-    G4d<?> result = _feature;
+    G4d<T> result = _feature;
     if (_feature.shape.length > 2)
     {
       int initial_size = _feature.shape.length - 2;

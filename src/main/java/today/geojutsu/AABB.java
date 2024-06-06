@@ -136,6 +136,36 @@ public class AABB implements Serializable
     return xyxy[3] - xyxy[1];
   }
 
+  public int getXMinInt()
+  {
+    return (int)xyxy[0];
+  }
+
+  public int getYMinInt()
+  {
+    return (int)xyxy[1];
+  }
+
+  public int getXMaxInt()
+  {
+    return (int)xyxy[2];
+  }
+
+  public int getYMaxInt()
+  {
+    return (int)xyxy[3];
+  }
+
+  public int getDXInt()
+  {
+    return (int)(xyxy[2] - xyxy[0]);
+  }
+
+  public int getDYInt()
+  {
+    return (int)(xyxy[3] - xyxy[1]);
+  }
+
   public AABB extend(final AABB _aabb)
   {
     if (_aabb.xyxy[0] < xyxy[0])

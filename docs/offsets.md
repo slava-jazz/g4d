@@ -7,7 +7,7 @@ it is 1 meter already. In a right way you have to specify absolute tolerance as 
 calculate parametric tolerance for each feature individually using “absolute2parametric” method.
 
 ```java
-public void someFunc(final double _tolerance_in_meter, final Geom4d<?> _feature)
+public void someFunc(final double _tolerance_in_meter, final G4d<?> _feature)
 {
   double parametric_tolerance = _feature.absolute2parametric(_tolerance_in_meter);
   // do hard job...
