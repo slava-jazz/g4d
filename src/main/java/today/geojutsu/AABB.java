@@ -136,6 +136,16 @@ public class AABB implements Serializable
     return xyxy[3] - xyxy[1];
   }
 
+  public double getCenterX()
+  {
+    return (xyxy[2] + xyxy[0])/2;
+  }
+
+  public double getCenterY()
+  {
+    return (xyxy[3] + xyxy[1])/2;
+  }
+
   public int getXMinInt()
   {
     return (int)xyxy[0];
@@ -165,6 +175,17 @@ public class AABB implements Serializable
   {
     return (int)(xyxy[3] - xyxy[1]);
   }
+
+  public int getCenterXInt()
+  {
+    return (int)getCenterX();
+  }
+
+  public int getCenterYInt()
+  {
+    return (int)getCenterY();
+  }
+
 
   public AABB extend(final AABB _aabb)
   {
@@ -217,9 +238,19 @@ public class AABB implements Serializable
     return this;
   }
 
-  public void extend(final V4d _v)
+  public AABB extend(final V4d _v)
   {
     extend(_v.xLon, _v.yLat);
+    return this;
+  }
+
+  public AABB shift(final double _dx, final double _dy)
+  {
+    xyxy[0] += _dx;
+    xyxy[2] += _dx;
+    xyxy[1] += _dy;
+    xyxy[3] += _dy;
+    return this;
   }
 
   public boolean theSame(final AABB _aabb)

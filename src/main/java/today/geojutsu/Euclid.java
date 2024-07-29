@@ -103,6 +103,15 @@ public class Euclid
 
   /**
    * calculate euclidean heading angle of the passed edge in range [0, 2Pi]
+   * @return euclidean heading
+   */
+  public static double calcHeading(final V4d _v1, final V4d _v2)
+  {
+    return Math.atan2(_v2.yLat - _v1.yLat, _v2.xLon - _v1.xLon);
+  }
+
+  /**
+   * calculate euclidean heading angle of the passed edge in range [0, 2Pi]
    * @param _e edge to calculate
    * @return euclidean heading
    */
@@ -272,7 +281,7 @@ public class Euclid
    * @param _v2 third  vertex on circle's arc
    * @return 2d center position
    */
-  private static V4d computeCircleCenter(final V4d _v0, final V4d _v1, final V4d _v2)
+  public static V4d computeCircleCenter(final V4d _v0, final V4d _v1, final V4d _v2)
   {
     double offset = _v1.xLon * _v1.xLon + _v1.yLat * _v1.yLat;
     double bc = (_v0.xLon * _v0.xLon + _v0.yLat * _v0.yLat - offset) / 2.0;
